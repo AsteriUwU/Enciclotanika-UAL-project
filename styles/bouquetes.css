@@ -1,0 +1,46 @@
+h1{
+    font-size: 3.125em;
+    text-align: center;
+    margin: 15px;
+}
+
+.text{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 50px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bouquetBox{
+    width: 80%;
+    margin: 20px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.bouquetBox h2{
+    margin: 15px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.bouquetImg{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.bouquetLimits{
+    height: 25rem;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bouquetInfo{
+    font-size: 1.25rem;
+    margin: 18px;
+}

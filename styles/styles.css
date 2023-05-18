@@ -1,0 +1,213 @@
+/*Gneral*/
+@font-face{
+    font-family: sans;
+    src: url(/fonts/SourceSansPro-Regular.otf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+}
+
+body{
+    background: #f5efe3;
+}
+
+/*Ivy animation*/
+.ivy{
+    position: absolute;
+    animation-name: ivyAppear;
+    height: 250px;
+    top: -55%;
+    left: -83px;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    z-index: -1;
+    transition: 0.25s;
+    animation-delay: 0.5s;
+}
+
+@media (min-width: 672px){
+    .ivy{
+        height: 450px;
+        left: -150px;
+    }
+}
+
+@keyframes ivyAppear{
+    100%{
+        top: 0;
+    }
+}
+
+/*Header*/
+header{
+    background-color: #CEF5CB;
+    box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+    width: 100%;
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo{
+    float: left;
+    display: block;
+    font-size: 2.25em;
+    padding: 10px 20px;
+    text-decoration: none;
+    align-content: center;
+}
+
+/*Menu list*/
+.headerList{
+    list-style: none;
+    overflow: hidden;
+}
+
+
+.listItem{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.35rem;
+}
+
+.listItem:hover{
+    background-color: #B0CB88;
+}
+
+.headerList{
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+/*Menu icon with css*/
+.headerBtn{
+    display: none;
+}
+
+.headerIcon{
+    padding: 28px 20px;
+    float: right;
+    cursor: pointer;
+}
+
+.menuIcon{
+    background-color: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.menuIcon:before{
+    background-color: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    top: 5px;
+}
+
+.menuIcon:after{
+    background-color: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    top: -5px;
+}
+
+/*Menu icon function*/
+.headerBtn:checked ~ .headerList{
+    max-height: 240px;
+}
+
+/*Menu icon animation*/
+.headerBtn:checked ~ .headerIcon  .menuIcon{
+    background: transparent;
+}
+
+.headerBtn:checked ~ .headerIcon .menuIcon:before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.headerBtn:checked ~ .headerIcon .menuIcon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/*Adjust header to device*/
+@media (min-width: 672px){
+    .menuList{
+        float: left;
+    }
+    .listItem{
+        padding: 20px 30px;
+    }
+    .headerList{
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .headerIcon{
+        display: none;
+    }
+    .termsAndPolicyChart{
+        width: 5rem;
+    }
+}
+
+/*Footer*/
+footer{
+    background-color: #CEF5CB;
+    box-shadow: rgba(0, 0, 0, 0.24) -3px -3px 8px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+}
+
+.footerCopyright{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.termsAndPolicy{
+    margin: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.termsAndPolicy a{
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.termsAndPolicyChart{
+    width: 10rem;
+    display: inline-block;
+    margin: 0px 15px;
+}
+
+.footerSocials{
+    text-align: center;
+}
+
+.footerSocials a{
+    margin: 0px 0.8em;
+}

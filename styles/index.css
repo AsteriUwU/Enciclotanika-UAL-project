@@ -1,0 +1,49 @@
+/*Logo not clickable*/
+.logo{
+   pointer-events: none;
+   cursor: default;
+
+}
+
+.welcome{
+    font-size: 3.125em;
+    text-align: center;
+    margin: 15px;
+}
+
+.sunflower{
+    display: block;
+    height: 15em;
+    margin: 20px auto;
+    animation-name: sunflowerSpin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: 0.25s;
+}
+
+@media (min-width: 672px){
+    .sunflower{
+        height: 22.5em;
+    }
+}
+
+@keyframes sunflowerSpin{
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+.subtitle{
+    font-size: 2.5em;
+    text-align: center;
+    margin: 50px;
+}
+
+.text{
+font-size: 1.5em;
+text-align: center;
+margin: 50px;
+width: 65%;
+margin-left: auto;
+margin-right: auto;
+}
